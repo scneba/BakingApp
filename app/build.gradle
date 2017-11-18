@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+    defaultConfig {
+        applicationId "com.clasence.shu.bakingapp"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    androidTestCompile 'com.android.support:support-annotations:26.+'
+
+    androidTestCompile('com.android.support.test.espresso:espresso-contrib:2.2') {
+
+        exclude group: 'com.android.support', module: 'appcompat'
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude group: 'com.android.support', module: 'support-annotations'
+        exclude module: 'recyclerview-v7'
+    }
+
+    androidTestCompile 'com.android.support.test.espresso:espresso-intents:2.2.2'
+
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2';
+
+    androidTestCompile 'com.android.support.test:rules:0.5'
+    androidTestCompile 'com.android.support.test:runner:0.5'
+    // Note that espresso-idling-resource is used in the code under test.
+    compile 'com.android.support.test.espresso:espresso-idling-resource:2.2.2';
+
+
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support:design:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+
+
+    //dialog styling library
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.github.sd6352051.niftydialogeffects:niftydialogeffects:1.0.0@aar'
+
+    //cardview and recycler support
+    compile 'com.android.support:cardview-v7:26.+'
+    compile 'com.android.support:recyclerview-v7:26.+'
+
+    compile 'com.google.android.exoplayer:exoplayer:r2.4.1'
+
+    //content provider librarry
+    apt 'net.simonvt.schematic:schematic-compiler:0.6.4'
+    compile 'net.simonvt.schematic:schematic:0.6.4'
+
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
+
+}

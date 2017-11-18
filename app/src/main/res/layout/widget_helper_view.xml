@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="90dp"
+    android:id="@+id/widget_LinearLL"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="4dp"
+    android:background="@drawable/recycler_selector">
+
+    <TextView
+    android:id="@+id/recipe_name"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAlignment="center"
+    android:gravity="center"
+    android:textStyle="bold"
+        android:padding="2dp"
+    android:textSize="12sp"
+    tools:text="Nuttellie Pie" />
+    <TextView
+        android:id="@+id/recipe_ingredients"
+        android:layout_below="@id/recipe_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:padding="2dp"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:textSize="12sp"
+        tools:text="Nuttellie Pie" />
+
+</RelativeLayout>
